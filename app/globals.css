@@ -1,10 +1,27 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --blood-red: #8b0000;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--black);
+  color: var(--black);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
 }
 
 code {
@@ -12,41 +29,170 @@ code {
     monospace;
 }
 
-.App {
+nav {
+  background-color: var(--blood-red);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.content {
+  padding: 0;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--blood-red);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+}
+
+.card-title {
   text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  border-bottom: 3px solid var(--black);
+  color: var(--black);
+  font-family: 'Alfa Slab One', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.hunting-guide {
+  width: 100%;
+  max-width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-section {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: fit-content;
 }
+
+.search-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.weapons-section {
+  text-align: center;
+}
+
+.weapons-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.weapons-list {
+  margin-bottom: 1.5rem;
+}
+
+.weapon-item {
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.clear-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.clear-btn:hover {
+  background-color: #333333;
+}
+
+/* Remove react-select outlines */
+.react-select__control,
+.react-select__control:focus,
+.react-select__control:active,
+.react-select__control:hover {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-color: #000000 !important;
+}
+
+.react-select__input,
+.react-select__input:focus,
+.react-select__input:active,
+.react-select__input:hover {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.react-select__menu,
+.react-select__menu:focus,
+.react-select__menu:active {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+input,
+input:focus,
+input:active,
+input:hover {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide scrollbar on react-select menu */
+.react-select__menu-list {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.react-select__menu-list::-webkit-scrollbar {
+  display: none;
+}
+
