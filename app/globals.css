@@ -131,45 +131,48 @@ nav a:hover {
   min-height: 0;
 }
 
-.outfit-tabs {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-  overflow-x: auto;
-}
-
-.outfit-tab {
-  padding: 0.5rem 0.75rem;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Alfa Slab One', cursive;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: opacity 0.2s;
-}
-
-.outfit-tab:hover {
-  opacity: 0.8;
-}
-
-.outfit-tab.active {
-  background-color: #ffffff;
-  color: #8b0000;
-}
-
 .outfit-progress {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
   color: #000000;
+}
+
+.filter-pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-pill {
+  padding: 0.4rem 1rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.filter-pill:hover {
+  opacity: 0.8;
+}
+
+.filter-pill.active {
+  background-color: #ffffff;
+  color: #8b0000;
+}
+
+.empty-state {
+  text-align: center;
+  color: #000000;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 .pelt-rows {
@@ -192,10 +195,46 @@ nav a:hover {
   border-radius: 4px;
 }
 
+.pelt-rows.compact {
+  gap: 0.3rem;
+}
+
+.letter-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--blood-red);
+  color: #ffffff;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.pelt-rows.compact .pelt-row {
+  padding: 0.35rem 0.75rem;
+}
+
+.pelt-rows.compact .pelt-animal {
+  font-size: 0.9rem;
+}
+
+.pelt-rows.compact .stepper-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+}
+
+.pelt-rows.compact .pelt-count {
+  font-size: 0.85rem;
+  min-width: 3.5rem;
+}
+
 .pelt-info {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
 }
 
 .pelt-animal {
@@ -203,21 +242,31 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
-.pelt-type {
-  font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 3px;
-  text-transform: uppercase;
+.item-requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
-.pelt-type-pelt {
-  background-color: #8b0000;
+.requirement-chip {
+  color: #cccccc;
+  font-size: 0.8rem;
+  text-transform: none;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.05em;
+}
+
+.requirement-chip.have {
+  color: #4caf50;
+}
+
+.made-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   color: #ffffff;
-}
-
-.pelt-type-feather {
-  background-color: #ffffff;
-  color: #8b0000;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .pelt-controls {
@@ -366,5 +415,20 @@ input:hover {
 
 .react-select__menu-list::-webkit-scrollbar {
   display: none;
+}
+
+.trapper-select .react-select__menu-list {
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+
+.trapper-select .react-select__menu-list::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+.trapper-select .react-select__menu-list::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
