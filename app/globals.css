@@ -14,6 +14,8 @@
 }
 
 html, body {
+  height: 100%;
+  overflow: hidden;
   background-color: var(--black);
   color: var(--black);
   font-family: 'Bebas Neue', cursive;
@@ -51,7 +53,8 @@ nav a:hover {
 
 .content {
   padding: 0;
-  min-height: calc(100vh - 68px);
+  height: calc(100vh - 68px);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,10 +66,15 @@ nav a:hover {
   padding: 1rem;
   width: 100%;
   max-width: 800px;
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   margin: 1rem 2rem;
+  overflow: hidden;
+}
+
+.card-wide {
+  max-width: 1100px;
 }
 
 .card-title {
@@ -85,7 +93,171 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
+  min-height: 0;
 }
+
+.landing-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.landing-link {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.landing-link:hover {
+  opacity: 0.8;
+}
+
+.pelt-tracker {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.outfit-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.outfit-tab {
+  padding: 0.5rem 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.outfit-tab:hover {
+  opacity: 0.8;
+}
+
+.outfit-tab.active {
+  background-color: #ffffff;
+  color: #8b0000;
+}
+
+.outfit-progress {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.pelt-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.pelt-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.pelt-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pelt-animal {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.pelt-type {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.pelt-type-pelt {
+  background-color: #8b0000;
+  color: #ffffff;
+}
+
+.pelt-type-feather {
+  background-color: #ffffff;
+  color: #8b0000;
+}
+
+.pelt-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepper-btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: #8b0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.stepper-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pelt-count {
+  color: #ffffff;
+  min-width: 4.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.pelt-count.complete {
+  color: #4caf50;
+}
+
 
 .hunting-guide {
   width: 100%;

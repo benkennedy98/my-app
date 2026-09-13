@@ -3,7 +3,7 @@ import HuntingGuide from "../components/HuntingGuide"
 
 export default function RDR2() {
   return (
-    <Card title="RDR2 Hunting Guide">
+    <Card title="Hunting Guide">
       <HuntingGuide />
     </Card>
   )

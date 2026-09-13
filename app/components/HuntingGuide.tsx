@@ -37,7 +37,7 @@ export default function HuntingGuide() {
           styles={{
             control: (base, state) => ({
               ...base,
-              backgroundColor: "#8b0000",
+              backgroundColor: "#000000",
               borderColor: "#000000",
               borderWidth: "2px",
               color: "#ffffff",
@@ -68,12 +68,12 @@ export default function HuntingGuide() {
             }),
             placeholder: (base) => ({
               ...base,
-              color: "#000000",
+              color: "#ffffff",
             }),
             option: (base, state) => ({
               ...base,
-              backgroundColor: state.isSelected ? "#8b0000" : state.isFocused ? "#a00000" : "#8b0000",
-              color: state.isFocused ? "#ffffff" : "#000000",
+              backgroundColor: state.isSelected ? "#000000" : state.isFocused ? "#333333" : "#000000",
+              color: "#ffffff",
               fontFamily: "'Alfa Slab One', cursive",
               textTransform: "uppercase",
               fontSize: "1rem",
@@ -81,28 +81,28 @@ export default function HuntingGuide() {
             }),
             menuList: (base) => ({
               ...base,
-              backgroundColor: "#8b0000",
+              backgroundColor: "#000000",
               outline: "none !important",
               boxShadow: "none !important",
               border: "2px solid #000000",
             }),
             singleValue: (base) => ({
               ...base,
-              color: "#000000",
+              color: "#ffffff",
               fontFamily: "'Alfa Slab One', cursive",
               textTransform: "uppercase",
             }),
             clearIndicator: (base) => ({
               ...base,
-              color: "#000000",
+              color: "#ffffff",
             }),
             dropdownIndicator: (base) => ({
               ...base,
-              color: "#000000",
+              color: "#ffffff",
             }),
             indicatorSeparator: (base) => ({
               ...base,
-              backgroundColor: "#000000",
+              backgroundColor: "#ffffff",
             }),
           }}
         />

@@ -18,13 +18,19 @@ export default function Navbar() {
         href="/"
         style={{ color: mounted && pathname === "/" ? "var(--white)" : "var(--black)" }}
       >
-        Home
+        RDR2
       </Link>
       <Link
-        href="/rdr2"
-        style={{ color: mounted && pathname === "/rdr2" ? "var(--white)" : "var(--black)" }}
+        href="/hunting-guide"
+        style={{ color: mounted && pathname === "/hunting-guide" ? "var(--white)" : "var(--black)" }}
       >
-        RDR2
+        Hunting Guide
+      </Link>
+      <Link
+        href="/pelt-tracker"
+        style={{ color: mounted && pathname === "/pelt-tracker" ? "var(--white)" : "var(--black)" }}
+      >
+        Pelt Tracker
       </Link>
     </nav>
   )
