@@ -27,28 +27,10 @@ export default function Navbar() {
         Hunting Guide
       </Link>
       <Link
-        href="/pelt-checklist"
-        style={{ color: mounted && pathname === "/pelt-checklist" ? "var(--white)" : "var(--black)" }}
-      >
-        Pelt Checklist
-      </Link>
-      <Link
         href="/trapper-progress"
         style={{ color: mounted && pathname === "/trapper-progress" ? "var(--white)" : "var(--black)" }}
       >
-        Garments
-      </Link>
-      <Link
-        href="/trapper-clothing"
-        style={{ color: mounted && pathname === "/trapper-clothing" ? "var(--white)" : "var(--black)" }}
-      >
-        Clothing
-      </Link>
-      <Link
-        href="/trapper-saddles"
-        style={{ color: mounted && pathname === "/trapper-saddles" ? "var(--white)" : "var(--black)" }}
-      >
-        Saddles
+        Trapper Progress
       </Link>
     </nav>
   )

@@ -1,7 +1,7 @@
 import { trapperSets } from "../data/trapperSets"
 import TrapperItemTracker from "./TrapperItemTracker"
 
-export default function TrapperProgress() {
+export default function TrapperGarments() {
   return (
     <TrapperItemTracker
       collections={trapperSets}

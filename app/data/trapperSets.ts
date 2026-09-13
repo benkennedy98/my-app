@@ -16,6 +16,8 @@ export interface TrapperSet {
 
 export const isLegendaryPelt = (pelt: string): boolean => pelt.startsWith("Legendary")
 
+export const isPerfectPelt = (pelt: string): boolean => pelt.startsWith("Perfect")
+
 export const isFeather = (pelt: string): boolean => pelt.endsWith("Feather")
 
 export const stripPeltQualityPrefix = (pelt: string): string =>

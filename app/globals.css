@@ -168,6 +168,35 @@ nav a:hover {
   color: #8b0000;
 }
 
+.section-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.section-pill {
+  padding: 0.75rem 1.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.section-pill:hover {
+  opacity: 0.8;
+}
+
+.section-pill.active {
+  background-color: #ffffff;
+  color: #8b0000;
+}
+
 .empty-state {
   text-align: center;
   color: #000000;
@@ -196,7 +225,7 @@ nav a:hover {
 }
 
 .pelt-rows.compact {
-  gap: 0.3rem;
+  gap: 0.5rem;
 }
 
 .letter-header {
@@ -212,22 +241,22 @@ nav a:hover {
 }
 
 .pelt-rows.compact .pelt-row {
-  padding: 0.35rem 0.75rem;
+  padding: 0.6rem 1rem;
 }
 
 .pelt-rows.compact .pelt-animal {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .pelt-rows.compact .stepper-btn {
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 1rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  font-size: 1.2rem;
 }
 
 .pelt-rows.compact .pelt-count {
-  font-size: 0.85rem;
-  min-width: 3.5rem;
+  font-size: 1rem;
+  min-width: 4.5rem;
 }
 
 .pelt-info {
@@ -237,9 +266,32 @@ nav a:hover {
   gap: 0.25rem;
 }
 
+.pelt-name-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quality-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.quality-badge.legendary {
+  background-color: #ffd700;
+  color: #000000;
+}
+
+.quality-badge.perfect {
+  background-color: #a855f7;
+  color: #ffffff;
+}
+
 .pelt-animal {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
 }
 
 .item-requirements {
@@ -250,7 +302,7 @@ nav a:hover {
 
 .requirement-chip {
   color: #cccccc;
-  font-size: 0.8rem;
+  font-size: 1.05rem;
   text-transform: none;
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 0.05em;
@@ -294,6 +346,105 @@ nav a:hover {
 .stepper-btn:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.needed-for-btn {
+  padding: 0.3rem 0.6rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.needed-for-btn:hover {
+  background-color: #ffffff;
+  color: #8b0000;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #8b0000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #000000;
+  color: #ffffff;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.1rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-body {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-usage-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.modal-item-name {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.modal-set-name {
+  color: #cccccc;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 0.05em;
+}
+
+.modal-pelt-amount {
+  color: #ffd700;
+  font-size: 1rem;
+  text-transform: none;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.05em;
 }
 
 .pelt-count {

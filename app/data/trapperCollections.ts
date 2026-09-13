@@ -22,3 +22,25 @@ export function getLegendaryPeltsAlreadyCrafted(
   })
   return used
 }
+
+export interface PeltUsage {
+  setName: string
+  itemName: string
+  count: number
+}
+
+export function getItemsNeedingPelt(
+  pelt: string,
+  isItemCrafted: (setId: string, index: number) => boolean
+): PeltUsage[] {
+  const usages: PeltUsage[] = []
+  allTrapperCollections.forEach(set => {
+    set.items.forEach((item, index) => {
+      if (isItemCrafted(set.id, index)) return
+      item.requirements.forEach(req => {
+        if (req.pelt === pelt) usages.push({ setName: set.name, itemName: item.name, count: req.count })
+      })
+    })
+  })
+  return usages
+}

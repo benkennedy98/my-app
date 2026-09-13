@@ -1,8 +1,8 @@
 "use client"
 
 import { Fragment, useState } from "react"
-import { isLegendaryPelt, isFeather, stripPeltQualityPrefix } from "../data/trapperSets"
-import { allTrapperCollections, getLegendaryPeltsAlreadyCrafted } from "../data/trapperCollections"
+import { isLegendaryPelt, isPerfectPelt, isFeather, stripPeltQualityPrefix } from "../data/trapperSets"
+import { allTrapperCollections, getLegendaryPeltsAlreadyCrafted, getItemsNeedingPelt } from "../data/trapperCollections"
 import { useCraftedItems, itemKey } from "../hooks/useCraftedItems"
 import { usePeltInventory } from "../hooks/usePeltInventory"
 
@@ -10,6 +10,7 @@ type TypeFilter = "all" | "pelt" | "feather" | "legendary"
 
 export default function PeltChecklist() {
   const [typeFilter, setTypeFilter] = useState<TypeFilter>("all")
+  const [modalPelt, setModalPelt] = useState<string | null>(null)
   const { isCrafted } = useCraftedItems()
   const { getCollected, setCollected } = usePeltInventory()
 
@@ -84,10 +85,17 @@ export default function PeltChecklist() {
               {showHeader && <div className="letter-header">{letter}</div>}
               <div className="pelt-row">
                 <div className="pelt-info">
-                  <span className="pelt-animal">{displayName}</span>
+                  <div className="pelt-name-line">
+                    <span className="pelt-animal">{displayName}</span>
+                    {legendary && <span className="quality-badge legendary">Legendary</span>}
+                    {isPerfectPelt(pelt) && <span className="quality-badge perfect">Perfect</span>}
+                  </div>
                 </div>
 
                 <div className="pelt-controls">
+                  <button className="needed-for-btn" onClick={() => setModalPelt(pelt)}>
+                    Needed For
+                  </button>
                   <button
                     className="stepper-btn"
                     onClick={() => setCollected(pelt, collected - 1)}
@@ -111,6 +119,32 @@ export default function PeltChecklist() {
           )
         })}
       </div>
+
+      {modalPelt && (
+        <div className="modal-overlay" onClick={() => setModalPelt(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <span>{stripPeltQualityPrefix(modalPelt)} needed for:</span>
+              <button className="modal-close-btn" onClick={() => setModalPelt(null)}>
+                ×
+              </button>
+            </div>
+            <div className="modal-body">
+              {getItemsNeedingPelt(modalPelt, (setId, index) => isCrafted(itemKey(setId, index))).map(
+                (usage, index) => (
+                  <div key={index} className="modal-usage-row">
+                    <span className="modal-set-name">{usage.setName}</span>
+                    <span className="modal-item-name">{usage.itemName}</span>
+                    <span className="modal-pelt-amount">
+                      {usage.count}x {stripPeltQualityPrefix(modalPelt)}
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
