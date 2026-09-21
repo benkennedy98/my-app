@@ -125,6 +125,37 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-transform: uppercase;
+  position: relative;
+  z-index: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/images/rdr2-keyart.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url('/images/rdr2-keyart.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(24px);
+  transform: scale(1.1);
 }
 
 code {
@@ -138,6 +169,7 @@ nav {
   display: flex;
   gap: 2rem;
   align-items: center;
+  flex-shrink: 0;
 }
 
 nav a {
@@ -155,20 +187,23 @@ nav a:hover {
 
 .content {
   padding: 0;
-  height: calc(100vh - 68px);
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .card {
-  background-color: var(--blood-red);
+  background-color: rgba(139, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 8px;
   padding: 1rem;
   width: 100%;
   max-width: 800px;
-  height: calc(100vh - 100px);
+  max-height: calc(100% - 2rem);
   display: flex;
   flex-direction: column;
   margin: 1rem 2rem;
