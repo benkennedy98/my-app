@@ -1,5 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@font-face {
+  font-family: 'RDRLino';
+  src: url('/fonts/RDRLino-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Redemption';
+  src: url('/fonts/Redemption-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chalet';
+  src: url('/fonts/Chalet-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HapnaSlabSerif';
+  src: url('/fonts/HapnaSlabSerif-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNowText';
+  src: url('/fonts/HelveticaNowText-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNowText';
+  src: url('/fonts/HelveticaNowText-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHelveticaPaneuropean';
+  src: url('/fonts/NeueHelveticaPaneuropean-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHelveticaPaneuropean';
+  src: url('/fonts/NeueHelveticaPaneuropean-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniversCondensed';
+  src: url('/fonts/UniversCondensed-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniversCondensed';
+  src: url('/fonts/UniversCondensed-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniversBoldCondensed';
+  src: url('/fonts/UniversBoldCondensed-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniversBoldCondensed';
+  src: url('/fonts/UniversBoldCondensed-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --black: #000000;
@@ -18,7 +119,7 @@ html, body {
   overflow: hidden;
   background-color: var(--black);
   color: var(--black);
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'RDRLino', cursive;
   font-size: 1.2rem;
   letter-spacing: 0.08em;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +145,8 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Redemption', cursive;
+  font-size: 1.6rem;
 }
 
 nav a:hover {
@@ -84,7 +186,7 @@ nav a:hover {
   font-size: 2rem;
   border-bottom: 3px solid var(--black);
   color: var(--black);
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
 }
 
 .card-content {
@@ -112,7 +214,7 @@ nav a:hover {
   background-color: #000000;
   color: #ffffff;
   text-decoration: none;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
   font-size: 1.2rem;
   border-radius: 4px;
   transition: opacity 0.2s;
@@ -153,7 +255,7 @@ nav a:hover {
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
   font-size: 0.85rem;
   text-transform: uppercase;
   transition: opacity 0.2s;
@@ -182,7 +284,7 @@ nav a:hover {
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
   font-size: 1.3rem;
   text-transform: uppercase;
   transition: opacity 0.2s;
@@ -234,7 +336,7 @@ nav a:hover {
   z-index: 1;
   background-color: var(--blood-red);
   color: #ffffff;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
   font-size: 1rem;
   padding: 0.2rem 0.5rem;
   margin-top: 0.3rem;
@@ -276,7 +378,7 @@ nav a:hover {
   font-size: 0.7rem;
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
 }
 
 .quality-badge.legendary {
@@ -304,7 +406,7 @@ nav a:hover {
   color: #cccccc;
   font-size: 1.05rem;
   text-transform: none;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'RDRLino', cursive;
   letter-spacing: 0.05em;
 }
 
@@ -355,7 +457,7 @@ nav a:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'RDRLino', cursive;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.05em;
@@ -397,7 +499,7 @@ nav a:hover {
   margin-bottom: 0.75rem;
   border-bottom: 2px solid #000000;
   color: #ffffff;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
   font-size: 1.1rem;
 }
 
@@ -435,7 +537,7 @@ nav a:hover {
   color: #cccccc;
   font-size: 1.4rem;
   text-transform: uppercase;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'RDRLino', cursive;
   letter-spacing: 0.05em;
 }
 
@@ -443,7 +545,7 @@ nav a:hover {
   color: #ffd700;
   font-size: 1rem;
   text-transform: none;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'RDRLino', cursive;
   letter-spacing: 0.05em;
 }
 
@@ -510,7 +612,7 @@ nav a:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'RDRLino', cursive;
   text-transform: uppercase;
   font-size: 0.9rem;
   transition: background-color 0.2s;
@@ -581,5 +683,52 @@ input:hover {
 .trapper-select .react-select__menu-list::-webkit-scrollbar-thumb {
   background-color: #ffffff;
   border-radius: 4px;
+}
+
+.font-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.font-preview-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.font-preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.font-preview-name {
+  color: #ffd700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.font-preview-sub {
+  color: #cccccc;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.font-preview-sample {
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.2;
+  overflow-wrap: break-word;
 }
 

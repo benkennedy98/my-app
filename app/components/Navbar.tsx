@@ -32,6 +32,12 @@ export default function Navbar() {
       >
         Trapper Progress
       </Link>
+      <Link
+        href="/font-preview"
+        style={{ color: mounted && pathname === "/font-preview" ? "var(--white)" : "var(--black)" }}
+      >
+        Fonts
+      </Link>
     </nav>
   )
 }
